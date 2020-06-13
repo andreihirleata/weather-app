@@ -12,12 +12,6 @@ const App = (props) => (
       city={props.location.city}
       country={props.location.country}
     />
-    {/* <ForecastSummary
-      date={props.forecasts.date}
-      temperature={props.forecasts.temperature.max}
-      description={props.forecasts.description}
-      icon={props.forecasts.icon}
-    /> */}
     <ForecastSummaries forecasts={props.forecasts} />
   </div>
 );
