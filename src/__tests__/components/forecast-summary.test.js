@@ -8,10 +8,10 @@ describe("ForecastSummary", () => {
   it("renders correctly", () => {
     const { asFragment } = render(
       <ForecastSummary
-        date="mockDate"
+        date={1525046400000}
         temperature="mockTemperature"
         description="mockDescription"
-        icon="mockIcon"
+        icon="200"
       />
     );
 
@@ -19,18 +19,18 @@ describe("ForecastSummary", () => {
   });
 
   it("renders the correct props", () => {
-    const { getByText } = render(
+    const { getByTestId } = render(
       <ForecastSummary
-        date="mockDate"
+        date={1525046400000}
         temperature="mockTemperature"
         description="mockDescription"
-        icon="mockIcon"
+        icon="200"
       />
     );
 
-    expect(getByText("mockDate")).toHaveClass("date");
-    // expect(getByText("mockTemperature")).toHaveClass("temperature"); the .max in app breaks it TODO: fix test
-    expect(getByText("mockDescription")).toHaveClass("description");
-    expect(getByText("mockIcon")).toHaveClass("icon");
+    expect(getByTestId("date-id")).toHaveClass("date");
+    expect(getByTestId("temperature-id")).toHaveClass("temperature");
+    expect(getByTestId("description-id")).toHaveClass("description");
+    expect(getByTestId("icon-id")).toHaveClass("icon");
   });
 });

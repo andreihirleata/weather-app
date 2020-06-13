@@ -1,6 +1,7 @@
 import React from "react";
-import WeatherComponent from "./weather-icon";
+// import WeatherComponent from "./weather-icon";
 import moment from "moment";
+import WeatherIcon from "react-icons-weather";
 
 const ForecastSummary = ({
   date,
@@ -27,12 +28,12 @@ const ForecastSummary = ({
         </span>
       </div>
       <div>
-        <WeatherComponent
+        <WeatherIcon
           className="icon"
           data-testid="icon-id"
           name="owm"
           iconId={icon}
-        ></WeatherComponent>
+        ></WeatherIcon>
       </div>
       <button value={date} onClick={handleForecastSelect}>
         More Details

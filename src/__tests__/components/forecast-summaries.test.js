@@ -2,25 +2,6 @@ import React from "react";
 import { cleanup, render } from "@testing-library/react";
 import ForecastSummaries from "../../components/forecast-summaries";
 
-const forecasts = [
-  {
-    date: 123,
-    description: "date1",
-    icon: "icon1",
-    temperature: {
-      max: 999,
-    },
-  },
-  {
-    date: 456,
-    description: "date2",
-    icon: "icon2",
-    temperature: {
-      max: 777,
-    },
-  },
-];
-
 afterEach(cleanup);
 
 describe("ForecastSummaries", () => {
@@ -28,7 +9,7 @@ describe("ForecastSummaries", () => {
     {
       date: 123,
       description: "date1",
-      icon: "icon1",
+      icon: "800",
       temperature: {
         max: 999,
       },
@@ -36,7 +17,7 @@ describe("ForecastSummaries", () => {
     {
       date: 456,
       description: "date2",
-      icon: "icon2",
+      icon: "200",
       temperature: {
         max: 777,
       },
