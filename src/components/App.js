@@ -26,7 +26,11 @@ const App = () => {
   );
 
   const handleForecastSelect = (date) => {
-    setSelectedDate(date);
+    if (selectedDate === date) {
+      setSelectedDate(0);
+    } else {
+      setSelectedDate(date);
+    }
   };
 
   return (
