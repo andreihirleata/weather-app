@@ -3,14 +3,23 @@ import LocationDetails from "./location-details";
 import PropTypes from "prop-types";
 import ForecastSummaries from "./forecast-summaries";
 import ForecastDetails from "./forecast-details";
+import axios from "axios";
 
 import "../App.css";
 import "../styles/app.css";
 
 const App = (props) => {
-  const [selectedDate, setSelectedDate] = useState(props.forecasts[0].date);
+  const [forecasts, setForecasts] = useState([]);
+  const [location, setLocation] = useState({ city: "", country: "" });
 
-  const selectedForecast = props.forecasts.find(
+  const [selectedDate = 0, setSelectedDate] = useState();
+
+  axios.get("https://mcr-codes-weather.herokuapp.com/forecast").then((res) => {
+    setForecasts(res.data.forecasts);
+    setLocation(res.data.location);
+  });
+
+  const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
 
@@ -20,15 +29,12 @@ const App = (props) => {
 
   return (
     <div>
-      <LocationDetails
-        city={props.location.city}
-        country={props.location.country}
-      />
+      <LocationDetails city={location.city} country={location.country} />
       <ForecastSummaries
         onForecastSelect={handleForecastSelect}
-        forecasts={props.forecasts}
+        forecasts={forecasts}
       />
-      <ForecastDetails forecast={selectedForecast} />
+      {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
     </div>
   );
 };
