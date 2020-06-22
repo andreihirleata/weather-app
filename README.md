@@ -1,3 +1,12 @@
+### Weather App
+Simple Weather App built using react.  
+To clone the repo run 'git clone git@github.com:andreihirleata/weather-app.git'  
+Run 'npm install' in the directory in which you cloned the repo to install the dependencies.  
+Run 'npm start' to run the app in development mode.  
+
+Alternatively you can visit [https://andreihirleata.github.io/weather-app/](https://andreihirleata.github.io/weather-app/) to view the deployed project.  
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
