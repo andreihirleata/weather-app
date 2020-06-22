@@ -14,11 +14,13 @@ class SearchForm extends React.Component {
   render() {
     return (
       <div className="search-bar">
-        <input
-          value={this.searchText}
-          type="text"
-          onChange={(event) => this.handleInputChange(event)}
-        ></input>
+        <div className="search-form">
+          <input
+            value={this.searchText}
+            type="text"
+            onChange={(event) => this.handleInputChange(event)}
+          ></input>
+        </div>
         <button
           className="location-submit"
           value="submit"

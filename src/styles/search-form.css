@@ -1,5 +1,8 @@
 .search-bar {
   margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
 }
 
 .location-submit {
@@ -37,7 +40,6 @@
   background: #2fb7df;
 }
 
-input {
-  height: 30px;
-  font-size: 20px;
+.search-form {
+  padding-top: 25px;
 }
