@@ -42,3 +42,18 @@
 .search-form {
   padding-top: 25px;
 }
+
+@media all and (max-width: 500px) {
+  .search-form {
+    align-self: center;
+    position: relative;
+  }
+  .search-bar {
+    flex-direction: column;
+  }
+  .location-submit {
+    height: 50%;
+    width: 50%;
+    align-self: center;
+  }
+}

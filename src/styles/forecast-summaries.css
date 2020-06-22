@@ -5,3 +5,9 @@
   margin: 20px 20px;
   flex-wrap: wrap;
 }
+
+@media all and (max-width: 500px) {
+  .forecast-summaries {
+    flex-direction: column;
+  }
+}
