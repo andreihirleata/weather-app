@@ -23,12 +23,12 @@ const ForecastDetails = (props) => {
       </div>
       <div>
         <span className="wind-speed">
-          Wind speed: {props.forecast.wind.speed}
+          Wind speed: {props.forecast.wind.speed} mph
         </span>
       </div>
       <div>
         <span className="wind-direction">
-          Wind direction: {props.forecast.wind.direction}
+          Wind direction: {props.forecast.wind.direction.toUpperCase()}
         </span>
       </div>
       <div>
