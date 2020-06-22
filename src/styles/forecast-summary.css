@@ -1,15 +1,11 @@
-.search-bar {
-  margin-bottom: 5px;
-}
-
-.location-submit {
+.btn {
   background: transparent;
   border: 2px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 700;
-  line-height: 0;
+  line-height: 1;
   margin: 18px;
   padding: 15px 25px;
   text-align: center;
@@ -28,16 +24,15 @@
   box-shadow: 0 3px 0 #1fa4cb;
 }
 
-.location-submit:hover {
+.btn:hover {
   background: #56d7ed;
 }
 
-.location-submit:active,
-.location-submit:focus {
+.btn:active,
+.btn:focus {
   background: #2fb7df;
 }
 
-input {
-  height: 30px;
-  font-size: 20px;
+.forecast-summary {
+  color: white;
 }

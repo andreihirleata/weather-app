@@ -20,6 +20,7 @@ class SearchForm extends React.Component {
           onChange={(event) => this.handleInputChange(event)}
         ></input>
         <button
+          className="location-submit"
           value="submit"
           onClick={() => this.props.onSelect(this.state.searchText)}
         >
