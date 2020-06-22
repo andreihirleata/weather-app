@@ -2,9 +2,15 @@ import React from "react";
 import moment from "moment";
 import WeatherIcon from "react-icons-weather";
 
+const iconStyle = {
+  fontSize: "30px",
+  margin: "10px",
+  textAlign: "left",
+};
+
 const ForecastSummary = (props) => {
   return (
-    <div>
+    <div className="active">
       <div>
         <span className="date" data-testid="date-id">
           {moment(props.date).format("ddd Do MMM")}
@@ -12,7 +18,7 @@ const ForecastSummary = (props) => {
       </div>
       <div>
         <span className="temperature" data-testid="temperature-id">
-          {props.temperature}&deg;c
+          {props.temperature}&deg;C
         </span>
       </div>
       <div>
@@ -22,6 +28,7 @@ const ForecastSummary = (props) => {
       </div>
       <div>
         <WeatherIcon
+          style={iconStyle}
           className="icon"
           data-testid="icon-id"
           name="owm"

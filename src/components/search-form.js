@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../styles/search-form.css";
+
 class SearchForm extends React.Component {
   constructor(props) {
     super(props);
@@ -11,7 +13,7 @@ class SearchForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="search-bar">
         <input
           value={this.searchText}
           type="text"
