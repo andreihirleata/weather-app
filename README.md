@@ -1,3 +1,5 @@
+![weather-app-dashboard](https://user-images.githubusercontent.com/21252360/85399555-ee669c00-b54e-11ea-88e1-3c059b058013.png)
+
 ### Weather App
 Simple Weather App built using react.  
 To clone the repo run `git clone git@github.com:andreihirleata/weather-app.git`  
