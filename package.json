@@ -13,12 +13,9 @@
     "react-icons-weather": "^1.0.5",
     "react-scripts": "3.4.1"
   },
-  "homepage": "https://andreihirleata.github.io/weather-app/",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build && cd ./build &&  echo /* /index.html 200 > _redirects ",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
