@@ -15,7 +15,7 @@ const App = () => {
   const [selectedDate = 0, setSelectedDate] = useState();
   const [error, setError] = useState();
 
-  const [, setInitialState] = useState(false);
+  const [initialState, setInitialState] = useState(false);
 
   useEffect(() => {
     axios
@@ -58,10 +58,12 @@ const App = () => {
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
-
+    if (!initialState){
+      return <div> <h1 className="location-details">Loading...</h1></div>
+    } else 
   return (
     <div className="container">
-      <LocationDetails city={location.city} country={location.country} />
+      {location &&  <LocationDetails city={location.city} country={location.country} /> }
       <SearchForm onSelect={handleLocationSelect} />
       {error && <DisplayError error={error} />}
       <ForecastSummaries
