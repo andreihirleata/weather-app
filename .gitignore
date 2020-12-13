@@ -9,7 +9,6 @@
 /coverage
 
 # production
-.netlify
 /build
 
 # misc
